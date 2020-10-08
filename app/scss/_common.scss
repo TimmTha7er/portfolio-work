@@ -1,0 +1,59 @@
+// ----------------------------------------------
+//		common
+// ----------------------------------------------
+body {
+  font-size: 14px;
+  // line-height: 1.8;
+  font-family: 'ProximaNova', sans-serif;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: $text-color;
+}
+
+.hidden {
+  display: none;
+}
+
+// (:hover, :focus, :active).
+// https://codepen.io/yurch-html/pen/qyaOZz
+.link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.25s ease;
+
+  &:link {
+  }
+  &:visited {
+  }
+  &:hover {
+    color: $accent-color;
+  }
+  &:active {
+    color: $accent-color;
+  }
+}
+
+::selection {
+  color: #fff;
+  background-color: #004fe4;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1200px) {
+    max-width: 970px;
+  }
+  @media only screen and (max-width: 992px) {
+    max-width: 750px;
+  }
+  @media only screen and (max-width: 768px) {
+    max-width: 540px;
+    padding: 0 15px;
+  }
+  @media only screen and (max-width: 480px) {
+    max-width: none;
+    padding: 0 5px;
+  }
+}

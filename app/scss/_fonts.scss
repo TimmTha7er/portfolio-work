@@ -1,0 +1,137 @@
+// ----------- Montserrat -----------
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Light'), local('MontserratLight'),
+    url('../fonts/Montserrat/MontserratLight.woff2') format('woff2'),
+    url('../fonts/Montserrat/MontserratLight.woff') format('woff'),
+    url('../fonts/Montserrat/MontserratLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Light Italic'), local('MontserratLightItalic'),
+    url('../fonts/Montserrat/MontserratLightItalic.woff2') format('woff2'),
+    url('../fonts/Montserrat/MontserratLightItalic.woff') format('woff'),
+    url('../fonts/Montserrat/MontserratLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Regular'), local('MontserratRegular'),
+    url('../fonts/Montserrat/MontserratRegular.woff2') format('woff2'),
+    url('../fonts/Montserrat/MontserratRegular.woff') format('woff'),
+    url('../fonts/Montserrat/MontserratRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Bold'), local('MontserratBold'),
+    url('../fonts/Montserrat/MontserratBold.woff2') format('woff2'),
+    url('../fonts/Montserrat/MontserratBold.woff') format('woff'),
+    url('../fonts/Montserrat/MontserratBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// ----------- Raleway -----------
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway Light'), local('RalewayLight'),
+    url('../fonts/Raleway/RalewayLight.woff2') format('woff2'),
+    url('../fonts/Raleway/RalewayLight.woff') format('woff'),
+    url('../fonts/Raleway/RalewayLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway Light Italic'), local('RalewayLightItalic'),
+    url('../fonts/Raleway/RalewayLightItalic.woff2') format('woff2'),
+    url('../fonts/Raleway/RalewayLightItalic.woff') format('woff'),
+    url('../fonts/Raleway/RalewayLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway Regular'), local('RalewayRegular'),
+    url('../fonts/Raleway/RalewayRegular.woff2') format('woff2'),
+    url('../fonts/Raleway/RalewayRegular.woff') format('woff'),
+    url('../fonts/Raleway/RalewayRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway Bold'), local('RalewayBold'),
+    url('../fonts/Raleway/RalewayBold.woff2') format('woff2'),
+    url('../fonts/Raleway/RalewayBold.woff') format('woff'),
+    url('../fonts/Raleway/RalewayBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// ----------- ProximaNova -----------
+@font-face {
+  font-family: 'ProximaNova';
+  src: local('ProximaNova Light'), local('ProximaNovaLight'),
+    url('../fonts/ProximaNova/ProximaNovaLight.woff2') format('woff2'),
+    url('../fonts/ProximaNova/ProximaNovaLight.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNovaLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src: local('ProximaNova Light Italic'), local('ProximaNovaLightItalic'),
+    url('../fonts/ProximaNova/ProximaNovaLightItalic.woff2') format('woff2'),
+    url('../fonts/ProximaNova/ProximaNovaLightItalic.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNovaLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src: local('ProximaNova Regular'), local('ProximaNovaRegular'),
+    url('../fonts/ProximaNova/ProximaNovaRegular.woff2') format('woff2'),
+    url('../fonts/ProximaNova/ProximaNovaRegular.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNovaRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src: local('ProximaNova Bold'), local('ProximaNovaBold'),
+    url('../fonts/ProximaNova/ProximaNovaBold.woff2') format('woff2'),
+    url('../fonts/ProximaNova/ProximaNovaBold.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNovaBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+// ----------- FontAwesome -----------
+@font-face {
+  font-family: 'FontAwesome';
+  src: 
+    url('../fonts/FontAwesome/fontawesome-webfont.woff2') format('woff2'),
+    url('../fonts/FontAwesome/fontawesome-webfont.woff') format('woff'),
+    url('../fonts/FontAwesome/fontawesome-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
