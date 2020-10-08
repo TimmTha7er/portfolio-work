@@ -7,7 +7,7 @@ body {
   font-family: 'ProximaNova', sans-serif;
   min-width: 320px;
   overflow-x: hidden;
-  color: $text-color;
+  color: $text;
 }
 
 .hidden {
@@ -26,10 +26,10 @@ body {
   &:visited {
   }
   &:hover {
-    color: $accent-color;
+    color: $accent;
   }
   &:active {
-    color: $accent-color;
+    color: $accent;
   }
 }
 
@@ -43,17 +43,65 @@ body {
   margin: 0 auto;
 
   @media only screen and (max-width: 1200px) {
-    max-width: 970px;
+    // max-width: 970px;
   }
   @media only screen and (max-width: 992px) {
-    max-width: 750px;
+    // max-width: 750px;
   }
   @media only screen and (max-width: 768px) {
-    max-width: 540px;
+    // max-width: 540px;
     padding: 0 15px;
   }
   @media only screen and (max-width: 480px) {
-    max-width: none;
+    // max-width: none;
     padding: 0 5px;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+// all section's titles
+.section-title > h2 {
+	color: $default;
+	text-transform: uppercase;
+	line-height: 26px;
+	margin-top: 0 0 20px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $default;
+}
+
+// all sections
+.section {
+	// position: absolute;
+	// width: 40%;
+	// left: 30%;
+	// height: 570px;
+	// margin: 180px 0px 20px 10px;
+	// padding: 45px 45px 20px 45px;
+	background: url(../img/bg-sections.png) repeat-x right top #f4f4f4;
+	box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+	border-bottom: 15px solid #f4f4f4;
+	border-top: 6px solid #111;
+	// opacity: 0;
+	transition: all 0.5s ease;
 }

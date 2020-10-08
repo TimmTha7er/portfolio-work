@@ -1,0 +1,98 @@
+// ----------------------------------------------
+//		Section Home
+// ----------------------------------------------
+.s-home {
+  opacity: 1;
+  margin-left: 0;
+  z-index: 120;
+
+  &__photo {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 10em;
+    border: 6px solid #ddd;
+  }
+
+  &__descr {
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 0;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 8px;
+		color: $default;
+		
+		&_accent {
+			font-weight: bold;
+		}
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    font-size: 14px;
+    margin-bottom: 20px;
+		line-height: 1.1;
+  }
+
+  &__text {
+    font-family: 'ProximaNovaLight', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+  &__hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background: url(../img/hr.png) no-repeat center center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	}
+	
+	&__contacts {
+		margin-bottom: 12px;
+	}
+}
+
+.contacts {
+  border-radius: 5px;
+  background: url(../img/s-home-contact.png) no-repeat center center $accent;
+
+  &__email {
+    font-family: 'ProximaNovaLight', sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+.social-icons {
+  &__link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    background: #333333;
+    font-size: 14px;
+    line-height: 30px;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: lighten(#333333, 5%);
+      color: $accent;
+    }
+  }
+}
