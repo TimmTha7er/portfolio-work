@@ -1,0 +1,71 @@
+// ----------------------------------------------
+//		Section Skills
+// ----------------------------------------------
+.s-skills-item-title {
+  margin-top: 40px;
+}
+
+.s-skills-item-title h3 {
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+  border-bottom: 1px dotted #021533;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+
+.s-skills-item {
+  margin-bottom: 40px;
+}
+
+.s-skills-item ul.skills-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.s-skills-item ul.skills-list .progress {
+  font-family: 'ProximaNova', sans-serif;
+  position: relative;
+  height: 25px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.s-skills-item ul.skills-list .progress .progress-bar {
+  background-color: #08aeac;
+}
+
+.s-skills-item ul.skills-list .progress .progress-bar.black {
+  background-color: #021533;
+}
+
+.s-skills-item ul.skills-list .progress .progress-bar.red {
+  background-color: #d9212a;
+}
+
+.s-skills-item ul.skills-list .progress .progress-type {
+  position: absolute;
+  left: 0px;
+  font-size: 13px;
+  padding: 3px 30px 2px 10px;
+  color: #ffffff;
+  background-color: rgba(25, 25, 25, 0.2);
+}
+
+.s-skills-item ul.skills-list .progress .progress-completed {
+  position: absolute;
+  right: 0px;
+  font-weight: 800;
+  font-family: 'ProximaNovaRegular', sans-serif;
+  padding: 3px 10px 2px;
+  color: #888;
+  font-size: 14px;
+}
+
+
+
