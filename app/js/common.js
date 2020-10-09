@@ -74,14 +74,15 @@
     //    https://github.com/mdbootstrap/perfect-scrollbar
     // ----------------------------------------------
 
-    let allSections = getAllEl('.section');
+    let allSections = getAllEl('.section-inner');
     allSections.forEach((item) => {
       const ps = new PerfectScrollbar(item, {
         wheelSpeed: 1,
         wheelPropagation: true,
         minScrollbarLength: 20,
+
       });
-      // console.log(ps.reach.x); // => 'start' or 'end' or null
+      // console.log(ps.reach); // => 'start' or 'end' or null
       // console.log(ps.reach.y); // => 'start' or 'end' or null
     });
 
@@ -117,24 +118,6 @@
         }
       });
     });
-
-    // getEl('.menu-list li').addEventListener('click', function () {
-    //   // добавляем класс "active" активной ссылке
-    //   getEl('.menu-list li').classList.remove('active');
-
-    //   getEl(this).classList.add('active');
-
-    //   // отображаем выбранны секции
-    //   var section = getEl(this).children.attr('href');
-    //   console.log(section);
-    //   if (section == '#home') {
-    //     getEl('section').classList.remove('move');
-    //   } else {
-    //     getEl('section').classList.remove('move');
-    //     getEl(section).classList.add('move');
-    //     getEl('.s-main-mnu, #home').classList.add('move');
-    //   }
-    // });
 
     // getEl('.btn.get-in-touch').addEventListener('click', function () {
     //   // делаем пункты меню не активными

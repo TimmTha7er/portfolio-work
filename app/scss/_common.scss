@@ -136,32 +136,39 @@ h3 {
   }
 }
 
-
-// all section's titles
-.section-title > h2 {
-  color: $default;
-  text-transform: uppercase;
-  line-height: 26px;
-  margin-top: 0 0 20px 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $default;
+.section-inner {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  padding: 45px 45px 20px 45px;
 }
 
 // all sections
 .section {
   position: absolute;
   width: 41%;
+  top: 0;
   left: 30%;
   height: 570px;
   // max-height: 570px;
   margin: 180px 0px 20px 10px;
-  padding: 45px 45px 20px 45px;
   background: url(../img/bg-sections.png) repeat-x right top #f4f4f4;
   box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
   border-bottom: 15px solid #f4f4f4;
   border-top: 6px solid #111;
   opacity: 0;
   transition: all 0.5s ease;
+
+  // all sections titles
+  &__title {
+    color: $default;
+    text-transform: uppercase;
+    line-height: 26px;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+  
+    border-bottom: 1px solid $default;
+  }
 
   @media only screen and (max-width: 1200px) {
     height: 600px;
@@ -233,4 +240,11 @@ h3 {
     line-height: 29px;
     font-size: 14px;
   }
+}
+
+
+// scroll
+.ps__thumb-y {
+  width: 10px;
+  background-color: #aaa;
 }
