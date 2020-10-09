@@ -1,0 +1,93 @@
+// ----------------------------------------------
+//		toggle menu
+// ----------------------------------------------
+.navicon {
+	position: absolute;
+	width: 100%;
+	top: -20px;
+	right: 60px;
+	height: 30px;
+	width: 50px;
+	margin: 40px auto 20px;
+	background: transparent;
+	display: block;
+	z-index: 999;
+	display: none;
+	transition: all 0.3s ease;
+}
+
+.navicon:before, .navicon:after {
+	content: "";
+	width: 45px;
+	background: #021533;
+	backface-visibility: hidden;
+	height: 3px;
+	left: 0;
+	transition: all 0.5s ease;
+}
+
+.navicon:before {
+	box-shadow: #021533 0 14px 0 0;
+	position: absolute;
+	top: 0;
+}
+
+.navicon:after {
+	position: absolute;
+	top: 28px;
+}
+
+.navicon-active {
+	margin-top: 10px;
+	transition: all 0.5s ease;
+}
+
+.navicon-active:before {
+	box-shadow: transparent 0 0 0 0;
+	top: 15px;
+	transform: rotate(225deg);
+}
+
+.navicon-active:after {
+	top: 15px;
+	transform: rotate(315deg);
+}
+
+
+// ---------------------------------------------- 
+//		Main Menu
+// ----------------------------------------------
+.s-main-mnu {
+	// position: absolute;
+	top: 0;
+	left: 15%;
+	width: 15%;
+	margin-top: 186px;
+	padding-right: 10px;
+	transition: all 0.5s ease;
+}
+
+.s-main-mnu-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.s-main-mnu-list li {
+	list-style-type: none;
+	background-color: #08AEAC;
+	margin-bottom: 5px;
+}
+
+.s-main-mnu-list li.active {
+	background-color: #021533;
+}
+
+.s-main-mnu-list li.active a {
+	padding-left: 15px;
+}
+
+.s-main-mnu-list a.btn {
+	font-weight: bold;
+}

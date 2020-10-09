@@ -80,33 +80,82 @@ h3 {
   font-size: 18px;
 }
 
+a.btn,
+input.btn {
+  position: relative;
+  display: block;
+  padding: 10px;
+  font-family: 'ProximaNovaRegular', sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  outline: none;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+// all buttons
+a.btn:before,
+input.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #021533;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+a.btn:hover,
+a.btn:active,
+input.btn:hover,
+input.btn:active {
+  color: #fff;
+  text-decoration: none;
+  padding-left: 15px;
+}
+
+a.btn:hover:before,
+a.btn:active:before,
+input.btn:hover:before,
+input.btn:active:before {
+  width: 100%;
+}
+
+a.btn:focus,
+input.btn:focus {
+  text-decoration: none;
+  background-color: #021533;
+}
+
 // all section's titles
 .section-title > h2 {
-	color: $default;
-	text-transform: uppercase;
-	line-height: 26px;
-	margin-top: 0 0 20px 0;
-	padding-bottom: 10px;
-	border-bottom: 1px solid $default;
+  color: $default;
+  text-transform: uppercase;
+  line-height: 26px;
+  margin-top: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $default;
 }
 
 // all sections
 .section {
-	// position: absolute;
-	// width: 40%;
-	// left: 30%;
-	// height: 570px;
-	// margin: 180px 0px 20px 10px;
-	// padding: 45px 45px 20px 45px;
-	background: url(../img/bg-sections.png) repeat-x right top #f4f4f4;
-	box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
-	border-bottom: 15px solid #f4f4f4;
-	border-top: 6px solid #111;
-	// opacity: 0;
+  // position: absolute;
+  // width: 40%;
+  // left: 30%;
+  // height: 570px;
+  // margin: 180px 0px 20px 10px;
+  // padding: 45px 45px 20px 45px;
+  background: url(../img/bg-sections.png) repeat-x right top #f4f4f4;
+  box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+  border-bottom: 15px solid #f4f4f4;
+  border-top: 6px solid #111;
+  // opacity: 0;
   transition: all 0.5s ease;
-  
+
   &__title {
-    
   }
 }
 
@@ -133,4 +182,27 @@ h3 {
     line-height: 29px;
     font-size: 14px;
   }
+}
+
+// perfect scrollbar
+.ps-container > .ps-scrollbar-x-rail,
+.ps-container > .ps-scrollbar-y-rail {
+  opacity: 0.8;
+}
+
+.ps-container > .ps-scrollbar-x-rail:hover > .ps-scrollbar-y,
+.ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+  width: 8px;
+}
+
+.ps-container > .ps-scrollbar-y-rail {
+  right: 2px;
+}
+
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  width: 8px;
+}
+
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y:active {
+  width: 8px;
 }

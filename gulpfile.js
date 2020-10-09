@@ -79,6 +79,7 @@ const js = () => {
     // add js libs
     // ...
     source_folder + '/libs/tiny-slider/tiny-slider.min.js',
+    source_folder + '/libs/perfect-scrollbar/perfect-scrollbar.min.js',
     source_folder + '/js/common.js', // Always at the end
   ])
     .pipe(concat('scripts.min.js'))

@@ -48,6 +48,22 @@
     });
 
     // ----------------------------------------------
+    //		perfect scrollbar
+    //    https://github.com/mdbootstrap/perfect-scrollbar
+    // ----------------------------------------------
+    // const container = document.querySelector('body');
+    // const ps = new PerfectScrollbar(container);
+
+    // or just with selector string
+    const ps = new PerfectScrollbar('.container', {
+      wheelSpeed: 2,
+      // wheelPropagation: true,
+      suppressScrollY: true,
+      suppressScrollX: true,
+      minScrollbarLength: 20
+    });
+
+    // ----------------------------------------------
     //		smooth scroll when clicking an anchor link
     // ----------------------------------------------
     const root = (() => {
