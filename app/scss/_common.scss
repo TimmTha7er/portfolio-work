@@ -119,18 +119,18 @@ h3 {
   text-align: center;
   color: #000;
   background-color: rgba(255, 255, 255, 0.66);
-  // display: none;
+  display: none;
   z-index: 8888;
-}
 
-.to-top:hover {
-  text-transform: none;
-  color: #000;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.77);
-}
+  &:hover {
+    text-transform: none;
+    color: #000;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.77);
+  }
 
-.to-top i {
-  line-height: 29px;
-  font-size: 14px;
+  &__icon {
+    line-height: 29px;
+    font-size: 14px;
+  }
 }
