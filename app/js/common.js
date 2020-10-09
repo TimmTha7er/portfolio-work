@@ -16,7 +16,29 @@
       return document.createElement(type);
     }
 
-    // add nav dots
+    // ----------------------------------------------
+    //		humburger menu
+    // ----------------------------------------------
+    getEl('.toggle-menu').addEventListener('click', (e) => {
+      // e.preventDefault();
+      const mainMenu = getEl('.menu-list');
+      e.target.classList.toggle('toggle-menu_active');
+      // mainMenu.classList.toggle('container--active');
+
+      if (mainMenu.classList.contains('menu-list_active')) {
+        mainMenu.classList.remove('menu-list_active');
+        mainMenu.style.maxHeight = 0;
+      } else {
+        mainMenu.classList.add('menu-list_active');
+        mainMenu.style.maxHeight = mainMenu.scrollHeight + 'px';
+      }
+
+      return false;
+    });
+
+    // ----------------------------------------------
+    //		add nav dots
+    // ----------------------------------------------
     function addNavDots(itemClass, containerClass) {
       const count = getAllEl(itemClass).length;
       const container = getEl(containerClass);
@@ -51,17 +73,79 @@
     //		perfect scrollbar
     //    https://github.com/mdbootstrap/perfect-scrollbar
     // ----------------------------------------------
-    // const container = document.querySelector('body');
-    // const ps = new PerfectScrollbar(container);
 
-    // or just with selector string
-    const ps = new PerfectScrollbar('.container', {
-      wheelSpeed: 2,
-      // wheelPropagation: true,
-      suppressScrollY: true,
-      suppressScrollX: true,
-      minScrollbarLength: 20
+    let allSections = getAllEl('.section');
+    allSections.forEach((item) => {
+      const ps = new PerfectScrollbar(item, {
+        wheelSpeed: 1,
+        wheelPropagation: true,
+        minScrollbarLength: 20,
+      });
+      // console.log(ps.reach.x); // => 'start' or 'end' or null
+      // console.log(ps.reach.y); // => 'start' or 'end' or null
     });
+
+    // ----------------------------------------------
+    //		перелистывание страниц
+    // ----------------------------------------------
+    const menuItems = getAllEl('.menu-list li');
+    menuItems.forEach((item) => {
+      return item.addEventListener('click', function () {
+        // добавляем класс "active" активной ссылке
+        menuItems.forEach((item) => {
+          item.classList.remove('menu-list__item_active');
+        });
+
+        item.classList.add('menu-list__item_active');
+
+        // отображаем выбранные секции
+        const section = item.firstElementChild.getAttribute('href');
+        if (section == '#home') {
+          let allSections = getAllEl('.section');
+          allSections.forEach((item) => {
+            item.classList.remove('move');
+          });
+          getEl('.s-main-mnu').classList.remove('move');
+        } else {
+          let allSections = getAllEl('.section');
+          allSections.forEach((item) => {
+            item.classList.remove('move');
+          });
+          getEl(section).classList.add('move');
+          getEl('.s-main-mnu').classList.add('move');
+          getEl('#home').classList.add('move');
+        }
+      });
+    });
+
+    // getEl('.menu-list li').addEventListener('click', function () {
+    //   // добавляем класс "active" активной ссылке
+    //   getEl('.menu-list li').classList.remove('active');
+
+    //   getEl(this).classList.add('active');
+
+    //   // отображаем выбранны секции
+    //   var section = getEl(this).children.attr('href');
+    //   console.log(section);
+    //   if (section == '#home') {
+    //     getEl('section').classList.remove('move');
+    //   } else {
+    //     getEl('section').classList.remove('move');
+    //     getEl(section).classList.add('move');
+    //     getEl('.s-main-mnu, #home').classList.add('move');
+    //   }
+    // });
+
+    // getEl('.btn.get-in-touch').addEventListener('click', function () {
+    //   // делаем пункты меню не активными
+    //   getEl('.menu-list li').classList.remove('active');
+    //   // делаем пункт в меня активным
+    //   getEl('.menu-list li a[href="#contact"]').parentElement.classList.add(
+    //     'active'
+    //   );
+    //   // выдвигаем секцию
+    //   getEl('section#contact').classList.add('move');
+    // });
 
     // ----------------------------------------------
     //		smooth scroll when clicking an anchor link

@@ -1,93 +1,158 @@
 // ----------------------------------------------
 //		toggle menu
 // ----------------------------------------------
-.navicon {
-	position: absolute;
-	width: 100%;
-	top: -20px;
-	right: 60px;
-	height: 30px;
-	width: 50px;
-	margin: 40px auto 20px;
-	background: transparent;
-	display: block;
-	z-index: 999;
-	display: none;
-	transition: all 0.3s ease;
+.toggle-menu {
+  position: absolute;
+  width: 100%;
+  top: -20px;
+  right: 60px;
+  height: 30px;
+  width: 50px;
+  margin: 40px auto 20px;
+  background: transparent;
+  display: block;
+  z-index: 999;
+  display: none;
+  transition: all 0.3s ease;
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+  }
+	@media only screen and (max-width: 480px) {
+		top: -50px;
+    right: 30px;
+	}
+  @media only screen and (max-width: 320px) {
+    top: -50px;
+    right: 20px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    width: 45px;
+    background: #021533;
+    backface-visibility: hidden;
+    height: 3px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+
+  &:before {
+    box-shadow: #021533 0 14px 0 0;
+    position: absolute;
+    top: 0;
+  }
+  &:after {
+    position: absolute;
+    top: 28px;
+  }
+
+  &_active {
+    margin-top: 10px;
+    transition: all 0.5s ease;
+
+    &:before {
+      box-shadow: transparent 0 0 0 0;
+      top: 15px;
+      transform: rotate(225deg);
+    }
+    &:after {
+      top: 15px;
+      transform: rotate(315deg);
+    }
+  }
 }
 
-.navicon:before, .navicon:after {
-	content: "";
-	width: 45px;
-	background: #021533;
-	backface-visibility: hidden;
-	height: 3px;
-	left: 0;
-	transition: all 0.5s ease;
-}
-
-.navicon:before {
-	box-shadow: #021533 0 14px 0 0;
-	position: absolute;
-	top: 0;
-}
-
-.navicon:after {
-	position: absolute;
-	top: 28px;
-}
-
-.navicon-active {
-	margin-top: 10px;
-	transition: all 0.5s ease;
-}
-
-.navicon-active:before {
-	box-shadow: transparent 0 0 0 0;
-	top: 15px;
-	transform: rotate(225deg);
-}
-
-.navicon-active:after {
-	top: 15px;
-	transform: rotate(315deg);
-}
-
-
-// ---------------------------------------------- 
+// ----------------------------------------------
 //		Main Menu
 // ----------------------------------------------
 .s-main-mnu {
-	// position: absolute;
-	top: 0;
-	left: 15%;
-	width: 15%;
-	margin-top: 186px;
-	padding-right: 10px;
-	transition: all 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 15%;
+  margin-top: 186px;
+  padding-right: 10px;
+  transition: all 0.5s ease;
+
+  @media only screen and (max-width: 1200px) {
+    margin-top: 56px;
+  }
+  @media only screen and (max-width: 992px) {
+    left: 0;
+    width: 100%;
+    padding: 0 60px;
+	}
+	@media only screen and (max-width: 480px) {
+		padding: 0 30px;
+	}
 }
 
-.s-main-mnu-list {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	display: block;
-}
+.menu-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: block;
 
-.s-main-mnu-list li {
-	list-style-type: none;
-	background-color: #08AEAC;
-	margin-bottom: 5px;
-}
+  @media only screen and (max-width: 992px) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 55px;
+    opacity: 0.97;
+  }
 
-.s-main-mnu-list li.active {
-	background-color: #021533;
-}
+  &__item {
+    list-style-type: none;
+    background-color: #08aeac;
+    margin-bottom: 5px;
 
-.s-main-mnu-list li.active a {
-	padding-left: 15px;
-}
+    &_active {
+      background-color: #021533;
+    }
 
-.s-main-mnu-list a.btn {
-	font-weight: bold;
+    @media only screen and (max-width: 992px) {
+      background-color: transparent;
+      margin-bottom: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: #021533;
+      position: relative;
+
+      &:before {
+        transition: all 0.5s ease;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover:before {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  &__link {
+    padding-left: 15px;
+    font-weight: bold;
+
+    @media only screen and (max-width: 992px) {
+      text-align: center;
+      padding: 17px 10px;
+      border-radius: 5px;
+
+      &:before {
+        content: none;
+      }
+
+      &:hover,
+      &:active {
+        color: #08aeac;
+        transition: all 0.5s ease;
+      }
+    }
+  }
 }

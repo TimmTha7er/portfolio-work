@@ -10,14 +10,24 @@
     <div class="container">
       <section class="s-main-mnu">
   <nav>
-    <ul class="s-main-mnu-list">
-      <li class="active"><a class="btn" href="#home">обо мне</a></li>
-      <li><a class="btn" href="#resume">резюме</a></li>
-      <li><a class="btn" href="#skills">навыки</a></li>
-      <li><a class="btn" href="#portfolio">портфолио</a></li>
-      <li><a class="btn" href="#contact">контакты</a></li>
+    <ul class="menu-list">
+      <li class="menu-list__item menu-list__item_active">
+        <a class="menu-list__link btn link" href="#home">обо мне</a>
+      </li>
+      <li class="menu-list__item">
+        <a class="menu-list__link btn link" href="#resume">резюме</a>
+      </li>
+      <li class="menu-list__item">
+        <a class="menu-list__link btn link" href="#skills">навыки</a>
+      </li>
+      <li class="menu-list__item">
+        <a class="menu-list__link btn link" href="#portfolio">портфолио</a>
+      </li>
+      <li class="menu-list__item">
+        <a class="menu-list__link btn link" href="#contact">контакты</a>
+      </li>
     </ul>
-    <a class="navicon" href="#"></a>
+    <a class="toggle-menu" href="#"></a>
   </nav>
 </section>
 
@@ -51,7 +61,7 @@
     </div>
   </div>
 </section>
-
+ 
         <section class="s-resume section" id="resume">
   <div class="s-resume__head">
     <div class="section-title">
@@ -411,7 +421,7 @@
     </div>
   </div>
 </section>
-
+ 
         <section class="s-portfolio section" id="portfolio">
   <div class="section-title">
     <h2 class="title section__title">портфолио</h2>
@@ -467,7 +477,9 @@
 </section>
 
       </main>
-      <a href="#" class="to-top"><i class="icon-angle-up to-top__icon"></i></a>
+      <a href="#" class="to-top link"
+        ><i class="icon-angle-up to-top__icon"></i
+      ></a>
     </div>
     <script src="js/scripts.min.js"></script>
   </body>
