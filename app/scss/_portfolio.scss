@@ -1,0 +1,19 @@
+// ----------------------------------------------
+//		Section Portfolio
+// ----------------------------------------------
+.projects-list {
+  &__responsive-wrap {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+	}
+	
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
