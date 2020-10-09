@@ -205,3 +205,33 @@
 	}
 }
 
+// resume slider dots
+.testimonials-nav-container {
+	text-align: center;
+	margin-top: 10px;
+
+	&__dot {
+		display: inline-block;
+		background-color: #869791;
+		opacity: .5;
+		width: 12px;
+		height: 12px;
+		border-radius: 10em;
+		margin: 5px;
+		cursor: pointer;
+		transition: all 0.5s ease;
+
+		&:hover {
+			opacity: 1;
+			background-color: #869791;
+		}
+
+		&.tns-nav-active {
+			background-color: #021533;
+			opacity: 1;
+		}
+	}
+}
+
+
+

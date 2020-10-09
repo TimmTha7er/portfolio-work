@@ -16,7 +16,35 @@
       return document.createElement(type);
     }
 
-    console.log('h1llo from gulp')
+    // add nav dots
+    function addNavDots(itemClass, containerClass) {
+      const count = getAllEl(itemClass).length;
+      const container = getEl(containerClass);
 
+      for (let i = 0; i < count; i++) {
+        let dot = createEl('div');
+        dot.className = `${containerClass.slice(1)}__dot`;
+        container.appendChild(dot);
+      }
+    }
+
+    addNavDots('.testimonials-list__item', '.testimonials-nav-container');
+
+    // ----------------------------------------------
+    //		resume slider
+    //    https://github.com/ganlanyuan/tiny-slider
+    // ----------------------------------------------
+
+    const slider = tns({
+      container: '.testimonials-slider',
+      viewportMax: 500,
+      items: 1,
+      slideBy: 'page',
+      speed: 400,
+      mouseDrag: true,
+      nav: true,
+      controls: false,
+      navContainer: '.testimonials-nav-container',
+    });
   });
 })();

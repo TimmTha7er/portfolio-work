@@ -78,6 +78,7 @@ const js = () => {
   return src([
     // add js libs
     // ...
+    source_folder + '/libs/tiny-slider/tiny-slider.min.js',
     source_folder + '/js/common.js', // Always at the end
   ])
     .pipe(concat('scripts.min.js'))
