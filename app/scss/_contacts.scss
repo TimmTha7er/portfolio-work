@@ -1,0 +1,47 @@
+// ----------------------------------------------
+//		Section Contacts
+// ----------------------------------------------
+
+.s-contact {
+  &__map {
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+
+  &__map-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+
+  &__iframe {
+    width: 100%;
+  }
+}
+
+.contact-info {
+  &__title {
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #08aeac;
+    margin-bottom: 8px;
+    margin-top: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #08aeac;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
