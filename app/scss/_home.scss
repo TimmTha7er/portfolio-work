@@ -4,8 +4,15 @@
 .s-home {
   opacity: 1;
   margin-left: 0;
-  padding: 45px 45px 20px 45px;
   z-index: 120;
+  padding: 45px 45px 20px 45px;
+
+  @media only screen and (max-width: 1200px) {
+    padding: 45px 25px 20px 25px;
+  }
+  @media only screen and (max-width: 992px) {
+    padding: 45px 45px 20px 45px;
+  }
 
   &__photo {
     width: 200px;
@@ -34,6 +41,7 @@
 
     &_accent {
       font-weight: bold;
+      color: $accent;
     }
   }
 
@@ -45,11 +53,12 @@
   }
 
   &__text {
-    font-family: 'ProximaNovaLight', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
     padding: 10px;
     margin-bottom: 15px;
     margin-top: 0;
+    font-weight: 300;
 
     @media only screen and (max-width: 1200px) {
       margin-bottom: 10px;
@@ -78,10 +87,11 @@
   background: url(../img/s-home-contact.png) no-repeat center center $accent;
 
   &__email {
-    font-family: 'ProximaNovaLight', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #ffffff;
     font-size: 12px;
     padding: 10px;
+    font-weight: 300;
   }
 
   &__phone,
@@ -112,7 +122,7 @@
     line-height: 30px;
     text-decoration: none;
     margin-right: 5px;
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
 
     &:hover {
       background-color: lighten(#333333, 5%);

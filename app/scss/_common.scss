@@ -75,12 +75,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'ProximaNova', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 34px;
 }
 
 h2 {
@@ -96,13 +96,14 @@ h3 {
   position: relative;
   display: block;
   padding: 10px;
-  font-family: 'ProximaNova', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   color: #fff;
   text-transform: uppercase;
   outline: none;
   z-index: 1;
-  transition: all 0.5s ease;
+  transition: padding 0.5s ease;
+  font-weight: 700;
 
   &::before {
     content: '';
@@ -111,19 +112,21 @@ h3 {
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: #021533;
+    background-color: $default;
     z-index: -1;
-    transition: all 0.5s ease;
+    transition: width 0.5s ease;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: #fff;
     text-decoration: none;
-    padding-left: 15px;
+    padding-left: 20px;
 
-    // @media only screen and (max-width: 992px) {
-    //   padding-left: 0px;
-    // }
+    @media only screen and (max-width: 992px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
     &:before {
       width: 100%;
@@ -132,7 +135,7 @@ h3 {
 
   &:focus {
     text-decoration: none;
-    background-color: #021533;
+    background-color: $default;
   }
 }
 
@@ -141,6 +144,13 @@ h3 {
   overflow: hidden;
   height: 100%;
   padding: 45px 45px 20px 45px;
+
+  @media only screen and (max-width: 1200px) {
+    padding: 45px 20px 20px 20px;
+  }
+  @media only screen and (max-width: 992px) {
+    padding: 45px 45px 20px 45px;
+  }
 }
 
 // all sections
@@ -157,7 +167,7 @@ h3 {
   border-bottom: 15px solid #f4f4f4;
   border-top: 6px solid #111;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease, margin-top 0.5s ease, left 0.5s ease;
 
   // all sections titles
   &__title {
@@ -166,7 +176,7 @@ h3 {
     line-height: 26px;
     margin: 0 0 20px 0;
     padding-bottom: 10px;
-  
+
     border-bottom: 1px solid $default;
   }
 
@@ -241,7 +251,6 @@ h3 {
     font-size: 14px;
   }
 }
-
 
 // scroll
 .ps__thumb-y {

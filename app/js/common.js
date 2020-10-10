@@ -16,6 +16,22 @@
       return document.createElement(type);
     }
 
+    // не скролить google map без фокуса
+    // getEl('.s-contact__map').addEventListener(
+    //   'hover',
+    //   function () {
+    //     // hover
+    //     let overlay = getEl('.s-contact__map-overlay');
+    //     overlay.addEventListener('click', function () {
+    //       overlay.style.display = 'none';
+    //     });
+    //   },
+    //   // don't hover
+    //   function () {
+    //     getEl('.s-contact__map-overlay').style.display = '';
+    //   }
+    // );
+
     // ----------------------------------------------
     //		humburger menu
     // ----------------------------------------------
@@ -80,7 +96,6 @@
         wheelSpeed: 1,
         wheelPropagation: true,
         minScrollbarLength: 20,
-
       });
       // console.log(ps.reach); // => 'start' or 'end' or null
       // console.log(ps.reach.y); // => 'start' or 'end' or null

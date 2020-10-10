@@ -15,13 +15,14 @@
     margin: 0;
     margin-bottom: 8px;
     letter-spacing: -1px;
-    border-bottom: 1px dotted #021533;
+    border-bottom: 1px dotted $default;
     padding-bottom: 5px;
     font-size: 18px;
   }
 }
 
 .skills-list {
+  font-family: 'Montserrat', sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -32,16 +33,15 @@
 }
 
 .progress {
-  font-family: 'ProximaNova', sans-serif;
   position: relative;
   height: 25px;
   font-weight: 300;
 
   &__progress-bar {
-    background-color: #08aeac;
+    background-color: $accent;
 
     &_black {
-      background-color: #021533;
+      background-color: $default;
     }
     &_red {
       background-color: #d9212a;
@@ -61,7 +61,6 @@
     position: absolute;
     right: 0px;
     font-weight: 700;
-    font-family: 'ProximaNova', sans-serif;
     padding: 3px 10px 2px;
     color: #888;
     font-size: 14px;

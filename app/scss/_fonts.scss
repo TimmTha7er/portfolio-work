@@ -124,14 +124,3 @@
   font-display: swap;
 }
 
-
-// ----------- FontAwesome -----------
-@font-face {
-  font-family: 'FontAwesome';
-  src: 
-    url('../fonts/FontAwesome/fontawesome-webfont.woff2') format('woff2'),
-    url('../fonts/FontAwesome/fontawesome-webfont.woff') format('woff'),
-    url('../fonts/FontAwesome/fontawesome-webfont.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 400;
-}
