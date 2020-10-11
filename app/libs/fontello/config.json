@@ -137,6 +137,24 @@
       "css": "angle-up",
       "code": 61702,
       "src": "fontawesome"
+    },
+    {
+      "uid": "d73eceadda1f594cec0536087539afbf",
+      "css": "heart",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c82f1ec71a2c9e5af8b00fe5fe27f57e",
+      "css": "hand-grab-o",
+      "code": 62037,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "31562b831ad0016b89ddf9693214041f",
+      "css": "hand-peace-o",
+      "code": 62043,
+      "src": "fontawesome"
     }
   ]
 }

@@ -11,6 +11,11 @@
     font-size: 10px;
     margin-right: 5px;
 
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
     &:before {
       background-color: $default;
     }
@@ -37,48 +42,7 @@
   }
 }
 
-.education-list {
-  &__title {
-    color: $accent;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -1px;
-    padding: 5px 0 5px 15px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    border-bottom: none;
-    text-transform: none;
-    border-left: 4px solid $accent;
-  }
-
-  &__item {
-    padding: 15px;
-    border: 4px double #ccc;
-    margin-bottom: 15px;
-  }
-
-  &__item-title {
-    margin: 0 0 8px 0;
-    padding-left: 0;
-    line-height: 22px;
-    letter-spacing: -1px;
-  }
-  &__item-subtitle {
-    font-size: 10px;
-    color: #555;
-    line-height: 15px;
-    margin: 5px 0 12px 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ccc;
-    font-weight: 300;
-    font-style: italic;
-  }
-  &__item-text {
-    font-weight: 300;
-  }
-}
-
-.experience-list {
+.experience-list, .education-list {
   margin-bottom: 40px;
 
   &__title {
@@ -111,16 +75,21 @@
     margin: 5px 0 12px 0;
     padding-bottom: 5px;
     border-bottom: 1px solid #ccc;
-    font-weight: 300;
+    // font-weight: 300;
     font-style: italic;
   }
   &__item-text {
     font-size: 12px;
-    font-weight: 300;
+    // font-weight: 300;
   }
 }
 
 .testimonials-list {
+
+  // for not jumping
+  &__item {
+    display: none;
+  }
   &__title {
     color: $accent;
     font-size: 20px;
@@ -175,12 +144,14 @@
     height: 110px;
     overflow: hidden;
     margin: 30px auto 15px;
+    border-radius: 50%;
+    border: 6px solid #ddd;
   }
 
   &__item-img {
-    width: 100%;
-    border-radius: 10em;
-    border: 6px solid #ddd;
+    max-width: 100%;
+    // border-radius: 10em;
+    // border: 6px solid #ddd;
   }
 
   &__item-author {
