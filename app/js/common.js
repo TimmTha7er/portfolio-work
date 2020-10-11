@@ -16,30 +16,12 @@
       return document.createElement(type);
     }
 
-    // не скролить google map без фокуса
-    // getEl('.s-contact__map').addEventListener(
-    //   'hover',
-    //   function () {
-    //     // hover
-    //     let overlay = getEl('.s-contact__map-overlay');
-    //     overlay.addEventListener('click', function () {
-    //       overlay.style.display = 'none';
-    //     });
-    //   },
-    //   // don't hover
-    //   function () {
-    //     getEl('.s-contact__map-overlay').style.display = '';
-    //   }
-    // );
-
     // ----------------------------------------------
     //		humburger menu
     // ----------------------------------------------
     getEl('.toggle-menu').addEventListener('click', (e) => {
-      // e.preventDefault();
       const mainMenu = getEl('.menu-list');
       e.target.classList.toggle('toggle-menu_active');
-      // mainMenu.classList.toggle('container--active');
 
       if (mainMenu.classList.contains('menu-list_active')) {
         mainMenu.classList.remove('menu-list_active');
@@ -97,14 +79,12 @@
         wheelPropagation: true,
         minScrollbarLength: 20,
       });
-      // console.log(ps.reach); // => 'start' or 'end' or null
-      // console.log(ps.reach.y); // => 'start' or 'end' or null
     });
 
     // ----------------------------------------------
     //		перелистывание страниц
     // ----------------------------------------------
-    const menuItems = getAllEl('.menu-list li');
+    const menuItems = getAllEl('.menu-list__item');
     menuItems.forEach((item) => {
       return item.addEventListener('click', function () {
         // добавляем класс "active" активной ссылке
@@ -134,16 +114,28 @@
       });
     });
 
-    // getEl('.btn.get-in-touch').addEventListener('click', function () {
-    //   // делаем пункты меню не активными
-    //   getEl('.menu-list li').classList.remove('active');
-    //   // делаем пункт в меня активным
-    //   getEl('.menu-list li a[href="#contact"]').parentElement.classList.add(
-    //     'active'
-    //   );
-    //   // выдвигаем секцию
-    //   getEl('section#contact').classList.add('move');
-    // });
+    const btnsToContacts = getAllEl('.btn.get-in-touch');
+    btnsToContacts.forEach((item) => {
+      item.addEventListener('click', function () {
+        // делаем пункты меню не активными
+        menuItems.forEach((item) => {
+          item.classList.remove('menu-list__item_active');
+        });
+
+        // делаем пункт в меня активным
+        getEl('.menu-list__link[href="#contact"]').parentElement.classList.add(
+          'menu-list__item_active'
+        );
+
+        let allSections = getAllEl('.section');
+        allSections.forEach((item) => {
+          item.classList.remove('move');
+        });
+        getEl('#home').classList.add('move');
+        // выдвигаем секцию
+        getEl('section#contact').classList.add('move');
+      });
+    });
 
     // ----------------------------------------------
     //		smooth scroll when clicking an anchor link

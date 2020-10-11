@@ -136,6 +136,7 @@
   &__link {
     padding-left: 15px;
     font-weight: bold;
+    transition: all .5s ease;
 
     @media only screen and (max-width: 992px) {
       text-align: center;
