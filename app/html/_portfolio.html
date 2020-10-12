@@ -4,18 +4,179 @@
       <h2 class="title section__title">портфолио</h2>
     </div>
     <div class="projects-list">
+      <h2 class="education-list__title">
+        <i class="icon-picture"></i>&nbsp;Верстка
+      </h2>
+      <p class="project-descr__text">
+        При верстке следующих работ я старался применять наиболее новые
+        технологии. Поэтому в IE11 они будут иметь некоторые визуальные отличия.
+        Если есть такая необходимость, я могу верстать с поддержкой IE9+,
+        используя bootstrap 3 или susy.
+      </p>
+      <p class="project-descr__text">
+        1 ) При верстке всех работ использовал Gulp, SCSS, сброс стилей, БЭМ
+        (именование классво), иконочный шрифт Font Awesome (fontello), Flexbox,
+        слайдер tiny-slider, адаптивные изображения (picture, srcset), humburger
+        menu на узких экранах, box-shadow, transition<br />
+        2 ) При билде для: <br />
+        a ) JS: uglify, contac, babel. <br />
+        b ) CSS: groupmedia, cleanCSS <br />
+        c ) картинок: imagemin, webp <br />
+      </p>
       <div class="projects-list__item">
-        <div class="projects-list__responsive-wrap">
-          <img
-            class="projects-list__img"
-            src="img/portfolio/thumb-p1.jpg"
-            alt=""
-          />
+        <div class="projects-list__img-wrap">
+          <a
+            class="link"
+            href="https://timmtha7er.github.io/bhost/"
+            target="_blank"
+            ><img
+              class="projects-list__img"
+              src="img/portfolio/BHosting.jpg"
+              alt=""
+          /></a>
         </div>
 
         <div class="project-descr">
-          <h2 class="project-descr__title">Project Title</h2>
-          <span class="project-descr__text">Project Tags</span>
+          <h2 class="project-descr__title">BHosting</h2>
+
+          <p class="project-descr__text">
+            В данной работе создавал спойлеры с помощью checkbox и вкладки с
+            помощью radiobutton. Так же создавал кастомные checkbox
+          </p>
+
+          <a
+            class="btn link s-resume__link"
+            href="https://timmtha7er.github.io/bhost/"
+            target="_blank"
+            >Посмотреть результат</a
+          >
+          <a
+            class="btn link s-resume__link"
+            href="https://github.com/TimmTha7er/bhost-work"
+            target="_blank"
+            >Рабочий проект</a
+          >
+        </div>
+      </div>
+      <div class="projects-list__item">
+        <div class="projects-list__img-wrap">
+          <a
+            class="link"
+            href="https://timmtha7er.github.io/uifuse/"
+            target="_blank"
+            ><img
+              class="projects-list__img"
+              src="img/portfolio/UIFUSE.jpg"
+              alt=""
+          /></a>
+        </div>
+
+        <div class="project-descr">
+          <h2 class="project-descr__title">UIFUSE</h2>
+
+          <p class="project-descr__text">
+            В данной работе для верстки секции portfolio c изображениями был
+            применен Grid. Фильтр изображений делал с помощью JS.
+          </p>
+
+          <a
+            class="btn link s-resume__link"
+            href="https://timmtha7er.github.io/uifuse/"
+            target="_blank"
+            >Посмотреть результат</a
+          >
+          <a
+            class="btn link s-resume__link"
+            href="https://github.com/TimmTha7er/uifuse-work"
+            target="_blank"
+            >Рабочий проект</a
+          >
+        </div>
+      </div>
+      <div class="projects-list__item">
+        <div class="projects-list__img-wrap">
+          <a
+            class="link"
+            href="https://timmtha7er.github.io/Bicycle/"
+            target="_blank"
+            ><img
+              class="projects-list__img"
+              src="img/portfolio/BICYCLE.jpg"
+              alt=""
+          /></a>
+        </div>
+
+        <div class="project-descr">
+          <h2 class="project-descr__title">BICYCLE</h2>
+
+          <p class="project-descr__text">
+            Данной работе очень интересна своей адаптивностью под размер экрана.
+            Для этого использовал соблюдающий пропорции контейнер(padding-top) и
+            свойства object-fit, object-position для изображений.
+          </p>
+
+          <a
+            class="btn link s-resume__link"
+            href="https://timmtha7er.github.io/Bicycle/"
+            target="_blank"
+            >Посмотреть результат</a
+          >
+          <a
+            class="btn link s-resume__link"
+            href="https://github.com/TimmTha7er/bicycle-work"
+            target="_blank"
+            >Рабочий проект</a
+          >
+        </div>
+      </div>
+
+      <h2 class="education-list__title">
+        <i class="icon-code"></i>&nbsp;Программирование
+      </h2>
+      <p class="project-descr__text"></p>
+      <div class="projects-list__item">
+        <div class="projects-list__img-wrap">
+          <a
+            class="link"
+            href="https://github.com/TimmTha7er/pizza-work"
+            target="_blank"
+            ><img
+              class="projects-list__img"
+              src="img/portfolio/PIZZA.jpg"
+              alt=""
+          /></a>
+        </div>
+
+        <div class="project-descr">
+          <h2 class="project-descr__title">REACT PIZZA</h2>
+
+          <p class="project-descr__text">REACT PIZZA - это онлайн магазин.</p>
+          <p class="project-descr__text">
+            Клиентская часть написана с помощью React, управление сотоянием -
+            Redux, лоудер при загрузке react-content-loader, маршрутизация -
+            react-router-dom.
+          </p>
+          <p class="project-descr__text">
+            Серверная часть написана на Node.js с помощью библиотеки Express.
+            Данные хранятся в БД mongoDB. Подключение к БД осуществляется с
+            помощью библиотеки mongoose
+          </p>
+          <p class="project-descr__text">
+            К сожалению, это не законченная работа. Поэтому перечислю что
+            сделано и что в работе. <br />
+
+            Сделана сортировка по категориям, фильтр по категориям. Выбор вида и
+            размера теста пиццы, работа корзины. <br />
+            В планах сделать админку, логин для администратора, редактирование
+            пицц, категорий сортировки и фильтра, подключение платежей.
+          </p>
+
+          <a
+            class="btn link s-resume__link"
+            href="https://github.com/TimmTha7er/pizza-work"
+            target="_blank"
+            >Рабочий проект</a
+          >
         </div>
       </div>
     </div>
