@@ -93,7 +93,9 @@ h3 {
   font-size: 18px;
 }
 
-// all buttons
+// ----------------------------------------------
+//		all buttons
+// ----------------------------------------------
 .btn {
   position: relative;
   display: block;
@@ -141,6 +143,9 @@ h3 {
   }
 }
 
+// ----------------------------------------------
+//		sections
+// ----------------------------------------------
 .section-inner {
   position: relative;
   overflow: hidden;
@@ -161,7 +166,6 @@ h3 {
   }
 }
 
-// all sections
 .section {
   position: absolute;
   width: 41%;
@@ -207,7 +211,9 @@ h3 {
   }
 }
 
-// передвижение секций
+// ----------------------------------------------
+//		передвижение секций
+// ----------------------------------------------
 .s-home.move {
   left: 16%;
 }
@@ -225,7 +231,9 @@ h3 {
   z-index: 100;
 }
 
-// scroll to top
+// ----------------------------------------------
+//		scroll to top
+// ----------------------------------------------
 .to-top {
   position: fixed;
   bottom: 50px;
@@ -238,14 +246,20 @@ h3 {
   display: none;
   z-index: 8888;
 
+  @media only screen and (max-width: 992px) {
+    right: 8px;
+  }
   @media only screen and (max-width: 768px) {
-    right: 22px;
+    right: 32px;
     background-color: rgba(2, 21, 51, 0.55);
     color: #fff;
 
     &:hover {
       background-color: rgba(2, 21, 51, 0.66);
     }
+  }
+  @media only screen and (max-width: 480px) {
+    right: 15px;
   }
 
   &:hover {
