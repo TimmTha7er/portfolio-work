@@ -16,6 +16,16 @@
   }
 
   &__title {
+    color: $accent;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    padding: 5px 0 5px 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: none;
+    text-transform: none;
+    border-left: 4px solid $accent;
     margin-bottom: 10px;
   }
 }
@@ -24,7 +34,25 @@
   &__title {
     margin-bottom: 10px;
   }
+
   &__text {
     margin-bottom: 15px;
+  }
+
+  &__link {
+    background-color: #008c8a;
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 10px;
+    margin-right: 5px;
+
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    &:before {
+      background-color: $default;
+    }
   }
 }
