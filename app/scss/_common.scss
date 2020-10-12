@@ -8,7 +8,8 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   color: $text;
-  background: url(../img/bg-body.png) no-repeat center center fixed;
+  background: url(../img/bg-body.jpg) no-repeat center center fixed;
+  background-image: image-set(url(../img/bg-body.webp) 1x);
   background-size: cover;
 }
 
@@ -170,6 +171,7 @@ h3 {
   // max-height: 570px;
   margin: 180px 0px 20px 10px;
   background: url(../img/bg-sections.png) repeat-x right top #f4f4f4;
+  background-image: image-set(url(../img/bg-sections.webp) 1x);
   box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
   border-bottom: 15px solid #f4f4f4;
   border-top: 6px solid #111;

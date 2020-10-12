@@ -91,6 +91,7 @@
 .contacts {
   border-radius: 5px;
   background: url(../img/s-home-contact.png) no-repeat center center $accent;
+  background-image: image-set(url(../img/s-home-contact.webp) 1x);
 
   &__email {
     font-family: 'Raleway', sans-serif;
