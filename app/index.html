@@ -1,72 +1,366 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-	<meta charset="UTF-8" />
-	
-	<title>Portfolio</title>
-	<meta name="author" content="Petrashkevich Roman" />
-	<meta
-		name="description"
-		content="Portfolio are a website containing my resume and information about me"
-	/>
-	<meta
-		name="keywords"
-		content="Portfolio, resume, contacts, Web developer, React, Redux, JS, JavaScript, html, css, sass, scss, gulp, webpack, node.js, mongoDB"
-	/>
-	<!-- favicon https://realfavicongenerator.net/ -->
-	<link
-		rel="apple-touch-icon"
-		sizes="180x180"
-		href="img/favicon/apple-touch-icon.png"
-	/>
-	<link
-		rel="icon"
-		type="image/png"
-		sizes="32x32"
-		href="/img/faviconfavicon-32x32.png"
-	/>
-	<link
-		rel="icon"
-		type="image/png"
-		sizes="16x16"
-		href="img/favicon/favicon-16x16.png"
-	/>
-	<meta name="apple-mobile-web-app-title" content="Portfolio" />
-	<meta name="application-name" content="Portfolio" />
-	<link rel="manifest" href="img/favicon/site.webmanifest" />
-	<link
-		rel="mask-icon"
-		href="img/favicon/safari-pinned-tab.svg"
-		color="#5bbad5"
-	/>
+  <meta charset="UTF-8" />
+  <title>Portfolio</title>
+  <meta name="author" content="Petrashkevich Roman" />
+  <meta
+    name="description"
+    content="Portfolio are a website containing my resume and information about me"
+  />
+  <meta
+    name="keywords"
+    content="Portfolio, resume, contacts, Web developer, React, Redux, JS, JavaScript, html, css, sass, scss, gulp, webpack, node.js, mongoDB"
+  />
 
-	<!-- IE color -->
-	<meta name="msapplication-navbutton-color" content="#FF3300" />
-	<meta name="msapplication-TileColor" content="#00aba9" />
-	<!-- Chrome, Firefox OS and Opera color -->
-	<meta name="theme-color" content="#ffffff" />
-	<!-- Sofari color -->
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
-	<!-- yandex color -->
-	<meta name="viewport" content="ya-title=fade,ya-dock=fade" />
-	<!-- / favicon -->
+  <!-- предзагрузка шрифтов -->
+  <!-- fontello -->
+  <link
+    rel="preload"
+    href="fonts/fontello/fontello.eot"
+    as="font"
+    type="application/vnd.ms-fontobject"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/fontello/fontello.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/fontello/fontello.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/fontello/fontello.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/fontello/fontello.svg"
+    as="font"
+    type="image/svg+xml"
+    crossorigin="anonymous"
+  />
+  <!-- Montserrat -->
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratRegular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratRegular.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratRegular.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratLightItalic.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratLightItalic.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratLightItalic.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratLight.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratLight.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratLight.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratBold.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat/MontserratBold.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <!-- ProximaNova -->
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaRegular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaRegular.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaRegular.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaLightItalic.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaLightItalic.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaLightItalic.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaLight.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaLight.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaLight.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaBold.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/ProximaNovaBold.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <!-- ProximaNova -->
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayRegular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayRegular.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayRegular.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayLightItalic.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayLightItalic.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayLightItalic.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayLight.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayLight.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayLight.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayBold.woff"
+    as="font"
+    type="font/woff"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNova/RalewayBold.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin="anonymous"
+  />
 
-	<!-- Open Graph -->
-	<meta property="og:title" content="Portfolio are a website" />
-	<meta property="og:site_name" content="Portfolio" />
-	<meta property="og:url" content="https://Portfolio.com/" />
-	<meta
-		property="og:description"
-		content="Portfolio are a website containing my resume and information about me."
-	/>
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="img/favicon/open-graph.jpg" />
-	<!-- / Open Graph -->
+  <!-- favicon https://realfavicongenerator.net/ -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="img/favicon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/img/faviconfavicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="img/favicon/favicon-16x16.png"
+  />
+  <meta name="apple-mobile-web-app-title" content="Portfolio" />
+  <meta name="application-name" content="Portfolio" />
+  <link rel="manifest" href="img/favicon/site.webmanifest" />
+  <link
+    rel="mask-icon"
+    href="img/favicon/safari-pinned-tab.svg"
+    color="#5bbad5"
+  />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="css/style.min.css" />
+  <!-- IE color -->
+  <meta name="msapplication-navbutton-color" content="#FF3300" />
+  <meta name="msapplication-TileColor" content="#00aba9" />
+  <!-- Chrome, Firefox OS and Opera color -->
+  <meta name="theme-color" content="#ffffff" />
+  <!-- Sofari color -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <!-- yandex color -->
+  <meta name="viewport" content="ya-title=fade,ya-dock=fade" />
+  <!-- / favicon -->
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio are a website" />
+  <meta property="og:site_name" content="Portfolio" />
+  <meta property="og:url" content="https://Portfolio.com/" />
+  <meta
+    property="og:description"
+    content="Portfolio are a website containing my resume and information about me."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/favicon/open-graph.jpg" />
+  <!-- / Open Graph -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
+
   <body>
     <div class="container">
       <div class="s-main-mnu">
